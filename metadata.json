@@ -1,0 +1,5 @@
+{
+  "name": "Cibum Fuori le Mura",
+  "description": "An elegant Tuscan restaurant in the heart of Pisa, offering authentic Italian cuisine and fine wines.",
+  "requestFramePermissions": ["geolocation"]
+}
