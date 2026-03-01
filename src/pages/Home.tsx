@@ -9,7 +9,7 @@ export function Home() {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=1920" 
+            src="/images/view.jpg" 
             alt="Tuscan Landscape" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"

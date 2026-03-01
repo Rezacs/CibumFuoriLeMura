@@ -7,6 +7,8 @@ import { History } from "./pages/History";
 import { Contact } from "./pages/Contact";
 import { News } from "./pages/News";
 import { NewsDetail } from "./pages/NewsDetail";
+import { FoodGallery } from "./pages/FoodGallery";
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,6 +32,7 @@ export default function App() {
             <Route path="/news" element={<News />} />
             <Route path="/news/:id" element={<NewsDetail />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/gallery" element={<FoodGallery />} />
           </Routes>
         </main>
         <Footer />
