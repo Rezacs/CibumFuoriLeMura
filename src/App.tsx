@@ -24,8 +24,11 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
+        
         <Header />
-        <main className="flex-grow">
+
+        {/* Global content offset for fixed header */}
+        <main className="flex-grow pt-[140px] md:pt-[160px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
@@ -37,7 +40,9 @@ export default function App() {
             <Route path="/wines" element={<Wines />} />
           </Routes>
         </main>
+
         <Footer />
+
       </div>
     </Router>
   );
