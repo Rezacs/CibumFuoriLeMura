@@ -4,7 +4,7 @@ import { newsData } from "../data/newsData";
 
 export function News() {
   return (
-    <div className="pt-32 pb-24 bg-[#F5EDE3] min-h-screen">
+    <div className="pb-24 bg-[#F5EDE3] min-h-screen">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <header className="text-center mb-16">
           <span className="text-[#E6A23C] uppercase tracking-[0.3em] text-sm mb-4 block">
