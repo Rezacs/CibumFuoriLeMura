@@ -8,6 +8,7 @@ import { Contact } from "./pages/Contact";
 import { News } from "./pages/News";
 import { NewsDetail } from "./pages/NewsDetail";
 import { FoodGallery } from "./pages/FoodGallery";
+import { Wines } from "./pages/Wines";
 
 
 function ScrollToTop() {
@@ -33,6 +34,7 @@ export default function App() {
             <Route path="/news/:id" element={<NewsDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<FoodGallery />} />
+            <Route path="/wines" element={<Wines />} />
           </Routes>
         </main>
         <Footer />

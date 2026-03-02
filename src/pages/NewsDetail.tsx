@@ -1,83 +1,79 @@
-import { motion } from "motion/react";
-import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Calendar } from "lucide-react";
-
-interface NewsItem {
-  id: number;
-  title: string;
-  date: string;
-  content: string;
-  image: string;
-}
+import { newsData } from "../data/newsData";
+import { motion } from "motion/react";
 
 export function NewsDetail() {
   const { id } = useParams();
-  const [item, setItem] = useState<NewsItem | null>(null);
-  const [loading, setLoading] = useState(true);
+  const article = newsData.find((n) => n.id === Number(id));
 
-  useEffect(() => {
-    fetch(`/api/news/${id}`)
-      .then(res => res.json())
-      .then(data => {
-        setItem(data);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, [id]);
-
-  if (loading) {
+  if (!article) {
     return (
-      <div className="pt-48 pb-24 text-center">
-        <p className="text-xl font-serif italic">Caricamento...</p>
-      </div>
-    );
-  }
-
-  if (!item) {
-    return (
-      <div className="pt-48 pb-24 text-center">
-        <h1 className="text-4xl mb-8">News not found</h1>
-        <Link to="/news" className="text-brand-gold hover:underline">Back to News</Link>
+      <div className="pt-32 pb-24 text-center bg-[#F5EDE3] min-h-screen">
+        <h1 className="text-4xl text-[#8B1E2D] mb-6">Article not found</h1>
+        <Link
+          to="/news"
+          className="text-[#E6A23C] uppercase tracking-widest text-sm hover:underline"
+        >
+          Back to News
+        </Link>
       </div>
     );
   }
 
   return (
-    <div className="pt-32 pb-24">
-      <div className="max-w-4xl mx-auto px-6 md:px-12">
-        <Link to="/news" className="inline-flex items-center gap-2 text-brand-dark/60 hover:text-brand-gold transition-colors mb-12 uppercase tracking-widest text-xs font-bold">
-          <ArrowLeft size={16} /> Back to News
+    <div className="pt-32 pb-24 bg-[#F5EDE3] min-h-screen">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+
+        {/* Back Link */}
+        <Link
+          to="/news"
+          className="text-sm uppercase tracking-widest text-[#E6A23C] hover:underline"
+        >
+          ← Back to News
         </Link>
 
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
+          className="mt-8 mb-16"
         >
-          <div className="flex items-center gap-4 mb-6">
-            <Calendar size={16} className="text-brand-gold" />
-            <span className="text-xs uppercase tracking-widest text-brand-gold font-bold">{item.date}</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl mb-12 leading-tight">{item.title}</h1>
+          <span className="text-xs uppercase tracking-widest text-[#E6A23C]">
+            {article.date}
+          </span>
 
-          <div className="overflow-hidden rounded-3xl mb-12 shadow-2xl aspect-video">
-            <img 
-              src={item.image} 
-              alt={item.title} 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-          </div>
+          <h1 className="text-4xl md:text-6xl mt-4 text-[#8B1E2D] leading-tight">
+            {article.title}
+          </h1>
 
-          <div className="prose prose-lg max-w-none text-brand-dark/80 font-serif leading-relaxed">
-            {item.content.split('\n').map((paragraph, i) => (
-              <p key={i} className="mb-6 text-xl">
-                {paragraph}
-              </p>
-            ))}
-          </div>
+          <div className="w-24 h-px bg-[#E6A23C] mt-6"></div>
         </motion.div>
+
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+          {/* Image Column */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="rounded-2xl overflow-hidden shadow-2xl"
+          >
+            <img
+              src={article.image}
+              alt={article.title}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+
+          {/* Text Column */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="font-serif text-xl md:text-2xl text-[#5a5a40] leading-relaxed whitespace-pre-line"
+          >
+            {article.content}
+          </motion.div>
+        </div>
       </div>
     </div>
   );
