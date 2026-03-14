@@ -20,15 +20,15 @@ export function Header() {
 
   const leftNav = [
     { name: "Home", path: "/" },
-    { name: "Menu", path: "/menu" },
-    { name: "Gallery", path: "/gallery" },
+    { name: "Storia", path: "/history" },
+    { name: "Menu", path: "/menu" }
   ];
 
   const rightNav = [
-    { name: "History", path: "/history" },
-    { name: "News", path: "/news" },
-    { name: "Contact", path: "/contact" },
-    { name: "Wines", path: "/wines" }
+    { name: "Vini", path: "/wines" },
+    { name: "Galleria", path: "/gallery" },
+    { name: "Notizie", path: "/news" },
+    { name: "Contatti", path: "/contact" },
   ];
 
   const allNav = [...leftNav, ...rightNav];
@@ -43,7 +43,7 @@ export function Header() {
           className="flex items-center gap-2 hover:text-[#E6A23C] transition-colors"
         >
           <Phone size={12} />
-          <span>+39 335 726 5557</span>
+          <span>+39 050 520 8081</span>
         </a>
       </div>
 
@@ -73,7 +73,7 @@ export function Header() {
           <div className="flex justify-center flex-shrink-0">
             <Link to="/">
               <img
-                src="/images/Logo.jpg"
+                src="/images/Logo.png"
                 alt="Cibum Fuori le Mura Logo"
                 className="h-16 md:h-20 object-contain"
               />

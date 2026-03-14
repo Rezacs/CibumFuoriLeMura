@@ -43,7 +43,7 @@ export function Home() {
       <section ref={heroRef} className="relative h-screen flex items-end pb-20 overflow-hidden">
         <motion.div style={{ y: heroY }} className="absolute inset-0 z-0">
           <img
-            src="/images/view.jpg"
+            src="/images/environment2.jpg"
             alt="Cibum Ristorante"
             className="w-full h-full object-cover"
           />
@@ -514,7 +514,7 @@ export function Home() {
       </section>
 
       {/* ── NAV LINKS GRID ───────────────────────────────────────────── */}
-      <section className="bg-[#2C1810] py-24 px-8 md:px-16 lg:px-24">
+      {/* <section className="bg-[#2C1810] py-24 px-8 md:px-16 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -557,7 +557,7 @@ export function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── CTA FINALE ───────────────────────────────────────────────── */}
       <section className="relative py-48 px-8 md:px-16 lg:px-24 overflow-hidden">
