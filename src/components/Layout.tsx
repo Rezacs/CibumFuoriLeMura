@@ -138,128 +138,153 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="bg-[#8B1E2D] text-[#F5EDE3] pt-20 pb-10 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1fr] gap-12 lg:gap-16 mb-16">
+          {/* Brand */}
+          <div>
+            <div className="flex items-center gap-4 mb-6">
+              <img
+                src="/images/Logo.png"
+                alt="Logo Cibum"
+                className="w-16 h-16 object-contain rounded-2xl bg-white/5 p-2"
+              />
+              <div>
+                <h2 className="text-3xl md:text-4xl font-display text-[#E6A23C]">
+                  CIBUM
+                </h2>
+                <p className="text-sm uppercase tracking-[0.25em] text-[#F5EDE3]/60 mt-1">
+                  Fuori le Mura
+                </p>
+              </div>
+            </div>
 
-        {/* Brand & Types */}
-        <div>
-          <h2 className="text-3xl font-display mb-6 text-[#E6A23C]">
-            CIBUM
-          </h2>
-
-          <div className="flex items-start gap-3 mb-4">
-            <UtensilsCrossed size={18} className="text-[#E6A23C] mt-1" />
-            <p className="text-[#F5EDE3]/80 leading-relaxed text-sm">
-              Grill, Ristorante di Frutti di Mare,<br />
-              Wine Restaurant, Bar Ristorante
-            </p>
-          </div>
-
-          <div className="flex gap-4 mt-6">
-            <a
-              href="https://www.instagram.com/cibumfuorilemurapisa/"
-              className="w-10 h-10 rounded-full border border-[#F5EDE3]/30 flex items-center justify-center hover:bg-[#E6A23C] hover:text-[#8B1E2D] transition-all"
-            >
-              <Instagram size={18} />
-            </a>
-
-            <a
-              href="https://www.facebook.com/Cibum.Pi/"
-              className="w-10 h-10 rounded-full border border-[#F5EDE3]/30 flex items-center justify-center hover:bg-[#E6A23C] hover:text-[#8B1E2D] transition-all"
-            >
-              <Facebook size={18} />
-            </a>
-          </div>
-        </div>
-
-        {/* Contact & Address */}
-        <div>
-          <h3 className="text-sm uppercase tracking-widest mb-6 text-[#E6A23C]">
-            Contact
-          </h3>
-
-          <div className="space-y-4 text-[#F5EDE3]/80 text-sm">
-            <div className="flex items-start gap-3">
-              <MapPin size={18} className="text-[#E6A23C] mt-1 shrink-0" />
-              <p>
-                Via Provinciale Calcesana 10<br />
-                Ghezzano, 56010 Pisa PI
+            <div className="flex items-start gap-3 mb-6">
+              <UtensilsCrossed size={18} className="text-[#E6A23C] mt-1 shrink-0" />
+              <p className="text-[#F5EDE3]/80 leading-relaxed text-sm md:text-base">
+                Grill, ristorante di pesce,
+                <br />
+                wine restaurant e bar ristorante.
               </p>
             </div>
 
-            <div className="flex items-center gap-3">
-              <Phone size={18} className="text-[#E6A23C]" />
-              <a href="tel:+393357265557" className="hover:text-[#E6A23C] transition">
-                +39 335 726 5557
+            <p className="text-[#F5EDE3]/70 text-sm leading-relaxed max-w-md">
+              Un luogo dove cucina, vino e atmosfera si incontrano in uno stile
+              caldo, elegante e autentico.
+            </p>
+
+            <div className="flex gap-4 mt-8">
+              <a
+                href="https://www.instagram.com/cibumfuorilemurapisa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-11 h-11 rounded-full border border-[#F5EDE3]/20 flex items-center justify-center hover:bg-[#E6A23C] hover:text-[#8B1E2D] transition-all"
+              >
+                <Instagram size={18} />
+              </a>
+
+              <a
+                href="https://www.facebook.com/Cibum.Pi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="w-11 h-11 rounded-full border border-[#F5EDE3]/20 flex items-center justify-center hover:bg-[#E6A23C] hover:text-[#8B1E2D] transition-all"
+              >
+                <Facebook size={18} />
               </a>
             </div>
-
-            <a
-              href="https://maps.app.goo.gl/VP6WtvDmEzAQx6d56"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-[#E6A23C] text-xs uppercase tracking-widest hover:underline mt-2"
-            >
-              Apri nella mappa
-            </a>
           </div>
-        </div>
 
-        {/* Opening Hours */}
-        <div>
-          <h3 className="text-sm uppercase tracking-widest mb-6 text-[#E6A23C]">
-            Opening Hours
-          </h3>
+          {/* Contatti */}
+          <div className="rounded-3xl bg-white/5 border border-white/10 p-6 md:p-8">
+            <h3 className="text-sm uppercase tracking-[0.3em] mb-6 text-[#E6A23C]">
+              Contatti
+            </h3>
 
-          <div className="flex items-start gap-3 mb-4">
-            <Clock size={18} className="text-[#E6A23C] mt-1 shrink-0" />
-            <div className="space-y-2 text-sm text-[#F5EDE3]/80">
-              <p>Domenica 12:00–15:00, 19:00–23:00</p>
-              <p>Lunedì 12:00–15:00, 19:00–23:00</p>
-              <p>Martedì 12:00–15:00, 19:00–23:00</p>
-              <p>Mercoledì 12:00–15:00, 19:00–23:00</p>
-              <p>Giovedì 12:00–15:00, 19:00–23:00</p>
-              <p>Venerdì 12:00–15:00, 19:00–23:00</p>
-              <p>Sabato 12:00–15:00, 19:00–23:00</p>
+            <div className="space-y-5 text-sm md:text-base text-[#F5EDE3]/80">
+              <div className="flex items-start gap-3">
+                <MapPin size={18} className="text-[#E6A23C] mt-1 shrink-0" />
+                <div>
+                  <p>Via Provinciale Calcesana 10</p>
+                  <p>Ghezzano, 56010 Pisa (PI)</p>
+
+                  <a
+                    href="https://maps.app.goo.gl/VP6WtvDmEzAQx6d56"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-3 text-[#E6A23C] text-xs uppercase tracking-widest hover:underline"
+                  >
+                    Apri su Google Maps
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Phone size={18} className="text-[#E6A23C] shrink-0" />
+                <a
+                  href="tel:+393357265557"
+                  className="hover:text-[#E6A23C] transition"
+                >
+                  +39 050 520 8081
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone size={18} className="text-[#E6A23C] shrink-0" />
+                <a
+                  href="tel:+393357265557"
+                  className="hover:text-[#E6A23C] transition"
+                >
+                  +39 335 726 5557
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Orari */}
+          <div className="rounded-3xl bg-white/5 border border-white/10 p-6 md:p-8">
+            <h3 className="text-sm uppercase tracking-[0.3em] mb-6 text-[#E6A23C]">
+              Orari di apertura
+            </h3>
+
+            <div className="flex items-start gap-3">
+              <Clock size={18} className="text-[#E6A23C] mt-1 shrink-0" />
+
+              <div className="w-full">
+                <div className="space-y-3 text-sm md:text-base text-[#F5EDE3]/80">
+                  {[
+                    "Lunedì",
+                    "Martedì",
+                    "Mercoledì",
+                    "Giovedì",
+                    "Venerdì",
+                    "Sabato",
+                    "Domenica",
+                  ].map((day) => (
+                    <div
+                      key={day}
+                      className="flex items-center justify-between gap-4 border-b border-white/10 pb-2 last:border-b-0 last:pb-0"
+                    >
+                      <span>{day}</span>
+                      <span className="text-[#F5EDE3] font-medium whitespace-nowrap">
+                        12:00–15:00 · 19:00–22:30
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Cuisine Tags */}
-        <div>
-          <h3 className="text-sm uppercase tracking-widest mb-6 text-[#E6A23C]">
-            Cucina
-          </h3>
+        {/* Bottom bar */}
+        <div className="pt-8 border-t border-[#F5EDE3]/15 flex flex-col md:flex-row items-center justify-between gap-4 text-xs uppercase tracking-[0.2em] text-[#F5EDE3]/60">
+          <p>© 2026 Cibum Fuori le Mura. Tutti i diritti riservati.</p>
 
-          <div className="flex flex-wrap gap-2">
-            {[
-              "Grill",
-              "Tradizionale",
-              "Frutti di Mare",
-              "Italiano",
-              "Toscana"
-            ].map((type) => (
-              <span
-                key={type}
-                className="px-3 py-1 rounded-full border border-[#F5EDE3]/30 text-xs uppercase tracking-widest text-[#F5EDE3]/80 hover:bg-[#E6A23C] hover:text-[#8B1E2D] transition"
-              >
-                {type}
-              </span>
-            ))}
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-[#E6A23C] transition-colors">
+              R
+            </a>
           </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto pt-8 border-t border-[#F5EDE3]/20 flex flex-col md:flex-row justify-between items-center text-xs text-[#F5EDE3]/60 uppercase tracking-widest">
-        <p>&copy; 2026 Cibum Fuori le Mura. All rights reserved.</p>
-
-        <div className="flex gap-6 mt-4 md:mt-0">
-          <a href="#" className="hover:text-[#E6A23C] transition-colors">
-            Privacy Policy
-          </a>
-          <a href="#" className="hover:text-[#E6A23C] transition-colors">
-            Terms of Service
-          </a>
         </div>
       </div>
     </footer>

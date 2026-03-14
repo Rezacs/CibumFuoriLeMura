@@ -695,10 +695,12 @@ export function Wines() {
         <div className="lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-16">
           {/* DESKTOP SIDEBAR */}
           <aside className="hidden lg:block">
-            <div className="sticky top-32 rounded-3xl bg-white shadow-xl border border-black/5 p-6 max-h-[78vh] overflow-y-auto">
-              <p className="text-xs uppercase tracking-widest text-[#5a5a40] mb-6 text-center">
-                Sezioni
-              </p>
+            <div className="sticky top-40 rounded-3xl bg-white shadow-xl border border-black/5 p-6 max-h-[78vh] overflow-y-auto">
+              <div className="sticky">
+                <p className="sticky text-xs uppercase tracking-widest text-[#5a5a40] mb-6 text-center">
+                  Sezioni
+                </p>
+              </div>
 
               <div className="space-y-6">
                 {collections.map((collection) => (
