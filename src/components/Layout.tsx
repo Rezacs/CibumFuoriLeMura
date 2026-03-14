@@ -220,6 +220,16 @@ export function Footer() {
               </div>
 
               <div className="flex items-center gap-3">
+                <Mail size={18} className="text-brand-gold" />
+                <a
+                  href="mailto:mezzolla@libero.it"
+                  className="text-xl hover:text-brand-gold transition"
+                >
+                  mezzolla@libero.it
+                </a>
+              </div>
+
+              <div className="flex items-center gap-3">
                 <Phone size={18} className="text-[#E6A23C] shrink-0" />
                 <a
                   href="tel:+393357265557"
