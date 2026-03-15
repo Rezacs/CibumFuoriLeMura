@@ -290,9 +290,18 @@ export function Footer() {
         <div className="pt-8 border-t border-[#F5EDE3]/15 flex flex-col md:flex-row items-center justify-between gap-4 text-xs uppercase tracking-[0.2em] text-[#F5EDE3]/60">
           <p>© 2026 Cibum Fuori le Mura. Tutti i diritti riservati.</p>
 
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-[#E6A23C] transition-colors">
-              R
+          <div className="flex gap-2 text-sm items-center">
+            <span className="text-[#F5EDE3]/60">
+              Designed and implemented by
+            </span>
+
+            <a
+              href="https://wa.me/393514717658?text=Ciao%20Reza,%20ho%20visto%20il%20sito%20Cibum"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[#E6A23C] tracking-wide hover:text-white transition-colors"
+            >
+              Reza
             </a>
           </div>
         </div>

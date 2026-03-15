@@ -11,7 +11,7 @@ export function News() {
             Notizie
           </span>
           <h1 className="text-5xl md:text-7xl mb-6 text-[#8B1E2D]">
-            Latest News
+            Ultime notizie
           </h1>
           <div className="w-24 h-px bg-[#E6A23C] mx-auto"></div>
         </header>
