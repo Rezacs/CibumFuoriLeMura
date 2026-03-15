@@ -6,24 +6,36 @@ export function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("loading");
 
+    const data = {
+      access_key: "018fcaa0-5e83-4424-9144-93489255d958",
+      name: formData.name,
+      email: formData.email,
+      message: formData.message
+    };
+
     try {
-      const response = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
       });
 
-      if (response.ok) {
+      const result = await res.json();
+
+      if (result.success) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus("error");
       }
-    } catch (error) {
+
+    } catch {
       setStatus("error");
     }
   };
