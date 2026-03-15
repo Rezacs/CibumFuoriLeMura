@@ -275,7 +275,7 @@ export function Footer() {
                       className="flex items-center justify-between gap-4 border-b border-white/10 pb-2 last:border-b-0 last:pb-0"
                     >
                       <span>{day}</span>
-                      <span className="text-[#F5EDE3] font-medium whitespace-nowrap">
+                      <span className="text-[#F5EDE3] font-medium sm:whitespace-nowrap">
                         12:00–15:00 · 19:00–22:30
                       </span>
                     </div>

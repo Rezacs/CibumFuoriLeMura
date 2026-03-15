@@ -10,43 +10,39 @@ export interface NewsItem {
 export const newsData: NewsItem[] = [
   {
     id: 1,
-    title: "New Spring Menu 2026",
-    date: "March 2026",
-    excerpt: "Discover our new seasonal dishes inspired by the Tuscan countryside.",
-    image: "/images/Food/caption (5).jpg",
+    title: "Pisa oltre la Torre: incontro sull’ospitalità della città",
+    date: "6 Marzo 2026",
+    excerpt: "A Palazzo Gambacorti un incontro dedicato al futuro dell’ospitalità e allo sviluppo turistico della città di Pisa.",
+    image: "/images/News/turismo.jpg",
     content: `
-This spring, Cibum Fuori le Mura introduces a new seasonal menu celebrating
-fresh vegetables, local seafood, and handmade pasta.
+Venerdì 6 marzo 2026, nella Sala delle Baleari di Palazzo Gambacorti a Pisa,
+si terrà l’incontro pubblico intitolato "Pisa oltre la Torre. L’ospitalità che resta".
 
-Our chef has carefully selected ingredients from local markets,
-combining traditional Tuscan recipes with a modern touch.
+L’iniziativa nasce con l’obiettivo di riflettere su come sta cambiando
+l’ospitalità nella città di Pisa e su quale ruolo possa avere nel futuro
+del territorio, andando oltre il turismo veloce e concentrato
+soltanto attorno alla Piazza dei Miracoli.
 
-Highlights include:
-• Grilled sea bass with lemon and herbs  
-• Handmade pici with asparagus and pecorino  
-• Fresh strawberry tiramisu  
+L’incontro sarà un momento di dialogo aperto tra cittadini,
+professionisti e operatori del settore, per discutere temi
+come il valore degli spazi urbani, l’equilibrio tra residenti e visitatori
+e il ruolo dell’accoglienza nello sviluppo della città.
 
-We invite you to join us and experience the flavors of the season.
-    `
-  },
-  {
-    id: 2,
-    title: "Wine & Grill Evening",
-    date: "February 2026",
-    excerpt: "An exclusive evening dedicated to Tuscan wines and charcoal grill specialties.",
-    image: "/images/Food/caption (8).jpg",
-    content: `
-Join us for a special Wine & Grill Evening featuring selected Tuscan wines
-paired with our signature charcoal-grilled dishes.
+All’evento parteciperanno:
+• Paolo Pesciatini, assessore al Turismo del Comune di Pisa  
+• Nico Tedeschi, consulente immobiliare e volto televisivo  
+• Alberto Furia, imprenditore locale  
+• Ilaria Mari, architetto e divulgatrice di design per l’ospitalità  
 
-Our sommelier will guide you through:
-• Chianti Classico Riserva  
-• Brunello di Montalcino  
-• Vermentino di Toscana  
+Secondo l’assessore Pesciatini, l’obiettivo è coinvolgere sempre più
+la cittadinanza nella costruzione di Pisa come destinazione turistica
+consapevole, valorizzando autenticità, identità e rispetto
+per il patrimonio della città.
 
-Each wine will be paired with carefully prepared grill specialties.
-
-Limited seats available — reserve your table now.
+L’incontro vuole offrire uno spazio di confronto concreto
+su casa, comunità e futuro urbano, perché l’ospitalità non riguarda
+soltanto il turismo, ma il modo in cui una città viene vissuta
+ogni giorno da chi la abita e da chi la visita.
     `
   }
 ];

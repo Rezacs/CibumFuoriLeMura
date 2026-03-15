@@ -128,6 +128,12 @@ export const foodSections: MenuSection[] = [
         price: "16 €",
         desc: "Allergeni 3/4/7",
       },
+    ],
+  },
+  {
+    title: "Su Prenotazione",
+    image: "/images/Food/caption (8).jpg",
+    items: [
       {
         name: "Bistecca alla fiorentina",
         price: "60 € / kg",
@@ -143,7 +149,7 @@ export const foodSections: MenuSection[] = [
         price: "Prezzo su richiesta",
         desc: "Allergeni 2/4/14",
       },
-    ],
+    ]
   },
 ];
 

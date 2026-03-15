@@ -131,12 +131,12 @@ export function Home() {
                 </p>
                 <div className="space-y-2">
                   {orari.map((item) => (
-                    <div key={item.giorno} className="flex justify-between gap-4 text-sm">
-                      <span className="text-[#5a4535]">{item.giorno}</span>
-                      <span className="text-[#2C1810] font-medium whitespace-nowrap">
-                        {item.orario}
-                      </span>
-                    </div>
+                  <div key={item.giorno} className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-4 text-sm">
+                    <span className="text-[#5a4535]">{item.giorno}</span>
+                    <span className="text-[#2C1810] font-medium sm:whitespace-nowrap">
+                      {item.orario}
+                    </span>
+                  </div>
                   ))}
                 </div>
               </div>
